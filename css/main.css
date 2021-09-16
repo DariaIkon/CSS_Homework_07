@@ -1,8 +1,13 @@
 @font-face {
-  font-family: "Tavolga Free", sans-serif;
+  font-family: "Tavolga Free";
   src: url(../fonts/tavolga-free.ttf);
 }
+@font-face {
+  font-family: "Lifehack_Sans";
+  src: url(../fonts/Lifehack_Sans.ttf);
+}
 body {
+  font-family: "Tavolga Free", sans-serif;
   margin: 0;
 }
 .logo {
@@ -40,11 +45,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   background-color: rgb(199, 210, 53);
   padding: 30px 0;
-  text-align: center;
 }
 #header_container {
   max-width: 1200px;
@@ -72,12 +76,16 @@ body {
   background-image: url(../images/main_img/main_img.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left;
+  background-position: center bottom;
   padding-top: 210px;
+  padding-bottom: 210px;
 }
 #main_container {
   width: 1200px;
   margin: 0 auto;
+}
+#main_info {
+  position: relative;
 }
 #main h1 {
   margin: 0;
@@ -88,7 +96,6 @@ body {
 }
 #main_info_text {
   font-size: 17px;
-  font-family: "Tavolga Free";
   color: rgb(57, 39, 3);
   line-height: 1.471;
 
@@ -98,6 +105,49 @@ body {
 
 .main_info_button {
   margin-top: 60px;
+}
+#main_arrow {
+  position: absolute;
+  left: 260px;
+  bottom: -85px;
+}
+#main_arrow_text {
+  font-size: 25px;
+  font-family: "Lifehack_Sans";
+  color: rgb(193, 205, 65);
+  line-height: 1.2;
+  text-align: center;
+  width: 109px;
+  -moz-transform: matrix(
+    0.93938712219109,
+    0.33796832248742,
+    -0.33636554551413,
+    0.94386328828046,
+    0,
+    0
+  );
+  -webkit-transform: matrix(
+    0.93938712219109,
+    0.33796832248742,
+    -0.33636554551413,
+    0.94386328828046,
+    0,
+    0
+  );
+  -ms-transform: matrix(
+    0.93938712219109,
+    0.33796832248742,
+    -0.33636554551413,
+    0.94386328828046,
+    0,
+    0
+  );
+  position: relative;
+}
+#main_arrow_img {
+  position: absolute;
+  bottom: -28px;
+  right: 85px;
 }
 
 /*advantage*/
@@ -109,25 +159,26 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 0;
-  margin-top: 50px;
 }
 #advantage_container div {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
   color: rgb(255, 255, 255);
-  line-height: 1.75;
   position: relative;
   z-index: 1;
+  padding: 6px 0 6px 10px;
 }
 #advantage_container div:not(:last-child) {
-  margin-right: 180px;
+  margin-right: 178px;
 }
 #advantage_container div::before {
   content: "";
   background-color: rgb(215, 168, 77);
   position: absolute;
   vertical-align: middle;
+  top: 0;
+  left: 0;
 
   width: 30px;
   height: 30px;
@@ -173,7 +224,7 @@ body {
   font-size: 55px;
   color: rgb(215, 168, 77);
   line-height: 1.182;
-  width: 466px;
+  width: 484px;
 }
 #order_form_wrapper {
   display: inline-block;
@@ -184,6 +235,7 @@ body {
   width: 648px;
   margin-top: 80px;
   margin-right: 15px;
+  padding: 30px 0;
 }
 #order_form_text {
   display: inline-block;
@@ -191,27 +243,16 @@ body {
   font-size: 15px;
   color: rgb(57, 39, 3);
   line-height: 1.667;
-  padding: 60px 40px 60px 40px;
+  padding: 0 40px 0 40px;
   position: relative;
+  vertical-align: middle;
 }
-#order_form_text::after {
-  content: "";
-  display: inline-block;
-  border-width: 1px;
-  border-color: rgb(244, 222, 180);
-  border-style: solid;
-
-  height: 259px;
-  width: 0;
-  position: absolute;
-  bottom: 30px;
-  right: 0;
-}
-
 #order_form {
   display: inline-block;
-  padding: 28px 36px 28px 36px;
+  padding: 0 35px 6px 35px;
   text-align: center;
+  border-left: 1px solid rgb(244, 222, 180);
+  vertical-align: middle;
 }
 #order_breakfasts_img {
   display: inline-block;
@@ -236,25 +277,27 @@ body {
   width: 230px;
   background-color: transparent;
   outline: none;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
-#order_form_input label {
-  position: absolute;
-  top: 0;
+#order_form_input input::placeholder {
   font-size: 15px;
   color: rgb(215, 168, 77);
   line-height: 1.667;
-  top: -10px;
-  left: 45px;
+}
+.order_form_button {
+  margin-top: 6px;
 }
 #order_flower {
   position: absolute;
-  right: 0;
+  right: -38px;
   top: -150px;
 }
 
 /*footer*/
 
 #footer {
+  position: relative;
   background-color: rgb(154, 165, 12);
 }
 #footer_container {
@@ -276,8 +319,20 @@ body {
 #footer_info {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 262px;
+  margin-left: 257px;
 
   font-size: 13px;
   color: rgb(58, 62, 7);
+}
+#footer_arrow {
+  border-radius: 50%;
+  background-color: rgb(244, 222, 180);
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  right: 20px;
+  top: -78px;
+}
+#footer_arrow img {
+  margin: 20px 17px;
 }
