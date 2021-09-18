@@ -24,8 +24,9 @@ body {
 
   font-size: 17px;
   color: rgb(255, 255, 255);
+  font-family: "Tavolga Free", sans-serif;
 
-  padding: 15px 42px;
+  padding: 16px 41px 17px;
   box-sizing: border-box;
 }
 .button::before {
@@ -100,7 +101,7 @@ body {
   line-height: 1.471;
 
   margin-top: 60px;
-  width: 477px;
+  width: 479px;
 }
 
 .main_info_button {
@@ -108,8 +109,8 @@ body {
 }
 #main_arrow {
   position: absolute;
-  left: 260px;
-  bottom: -85px;
+  left: 250px;
+  bottom: -60px;
 }
 #main_arrow_text {
   font-size: 25px;
@@ -146,7 +147,7 @@ body {
 }
 #main_arrow_img {
   position: absolute;
-  bottom: -28px;
+  bottom: -16px;
   right: 85px;
 }
 
@@ -329,9 +330,10 @@ body {
   background-color: rgb(244, 222, 180);
   width: 58px;
   height: 58px;
-  position: absolute;
+  position: fixed;
   right: 20px;
-  top: -78px;
+  bottom: 120px;
+  z-index: 10;
 }
 #footer_arrow img {
   margin: 20px 17px;
